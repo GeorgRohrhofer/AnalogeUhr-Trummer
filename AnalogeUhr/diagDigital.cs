@@ -18,11 +18,12 @@ namespace AnalogeUhr
         public event StartStop StartStopEvent;
         public event ZwischenZeit ZwischenZeitEvent;
 
+        private Color button_color;
 
         public diagDigital()
         {
             InitializeComponent();
-            
+            button_color = this.btn_zwischenzeit.BackColor;
         }
 
         private void btn_StartStop_Click(object sender, EventArgs e)
@@ -57,6 +58,14 @@ namespace AnalogeUhr
                 this.btn_StartStop.Text = "Start";
                 this.btn_zwischenzeit.Enabled = false;
             }
+        }
+
+        public void toggle_zwischenzeit()
+        {
+            if (this.btn_zwischenzeit.BackColor != Color.LightCoral)
+                this.btn_zwischenzeit.BackColor = Color.LightCoral;
+            else
+                this.btn_zwischenzeit.BackColor = this.button_color;
         }
     }
 }

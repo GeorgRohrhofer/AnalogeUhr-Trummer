@@ -28,6 +28,8 @@ namespace AnalogeUhr
 
         public bool live_digital_view = true;
 
+        public Color button_color;
+
         public diagDigital diag_Dig = new diagDigital();
 
         public Form1()
@@ -41,6 +43,8 @@ namespace AnalogeUhr
 
             this.client_height = ClientSize.Height + this.menuStrip1.Height;
             this.client_width = ClientSize.Width;
+
+            this.button_color = this.btn_zwischenzeit.BackColor;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -150,6 +154,11 @@ namespace AnalogeUhr
         private void btn_zwischenzeit_Click(object sender, EventArgs e)
         {
             this.set_Zwischenzeit();
+            if (this.btn_zwischenzeit.BackColor != Color.LightCoral)
+                this.btn_zwischenzeit.BackColor = Color.LightCoral;
+            else
+                this.btn_zwischenzeit.BackColor = this.button_color;
+            this.diag_Dig.toggle_zwischenzeit();
         }
 
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -197,6 +206,7 @@ namespace AnalogeUhr
 
         public void toggle_zwischenzeit()
         {
+            this.btn_zwischenzeit.Focus();
             this.btn_zwischenzeit.PerformClick();
         }
 
