@@ -1,0 +1,11 @@
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\bin\Debug\AnalogeUhr.exe.config
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\bin\Debug\AnalogeUhr.exe
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\bin\Debug\AnalogeUhr.pdb
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.csprojAssemblyReference.cache
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.Form1.resources
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.Properties.Resources.resources
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.csproj.GenerateResource.cache
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.csproj.CoreCompileInputs.cache
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.exe
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.pdb
+C:\Users\georg\OneDrive - HTBLuVA Wiener Neustadt\4BHIF\POS\Projects\AnalogeUhr\AnalogeUhr\obj\Debug\AnalogeUhr.diagDigital.resources
