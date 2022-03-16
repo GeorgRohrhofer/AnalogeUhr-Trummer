@@ -13,7 +13,7 @@ namespace AnalogeUhr
 {
     public partial class Form1 : Form
     {
-        private int SecondAngle = 90;
+        private int SecondAngle = 90; //0 Grad ist bei 3 Uhr
         private int MinuteAngle = 90;
         private Thread clock_thread;
 
@@ -28,8 +28,6 @@ namespace AnalogeUhr
 
         public bool live_digital_view = true;
 
-        public Color button_color;
-
         public diagDigital diag_Dig = new diagDigital();
 
         public Form1()
@@ -43,8 +41,6 @@ namespace AnalogeUhr
 
             this.client_height = ClientSize.Height + this.menuStrip1.Height;
             this.client_width = ClientSize.Width;
-
-            this.button_color = this.btn_zwischenzeit.BackColor;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,9 +53,9 @@ namespace AnalogeUhr
             int angle = 0;
             int Radius = 0;
             if (this.client_height < this.client_width)
-                Radius = (this.client_height - 100) / 2;
+                Radius = (this.client_height - 125) / 2;
             else if (this.client_height > this.client_width)
-                Radius = (this.client_width - 100) / 2;
+                Radius = (this.client_width - 125) / 2;
 
             e.Graphics.FillEllipse(Brushes.Black, this.client_width / 2-3, this.client_height / 2-3, 6, 6);
 
@@ -95,7 +91,7 @@ namespace AnalogeUhr
             if(btnStartStop.Text == "Start")
             {
                 btnStartStop.Text = "Stop";
-                clock_thread = new Thread(new ThreadStart(Run_second));
+                clock_thread = new Thread(new ThreadStart(run));
                 clock_thread.Start();
 
                 this.btn_zwischenzeit.Enabled = true;
@@ -111,7 +107,7 @@ namespace AnalogeUhr
 
         }
 
-        public void Run_second()
+        public void run()
         {
             while(btnStartStop.Text == "Stop")
             {
@@ -154,10 +150,6 @@ namespace AnalogeUhr
         private void btn_zwischenzeit_Click(object sender, EventArgs e)
         {
             this.set_Zwischenzeit();
-            if (this.btn_zwischenzeit.BackColor != Color.LightCoral)
-                this.btn_zwischenzeit.BackColor = Color.LightCoral;
-            else
-                this.btn_zwischenzeit.BackColor = this.button_color;
             this.diag_Dig.toggle_zwischenzeit();
         }
 
@@ -206,8 +198,9 @@ namespace AnalogeUhr
 
         public void toggle_zwischenzeit()
         {
-            this.btn_zwischenzeit.Focus();
-            this.btn_zwischenzeit.PerformClick();
+            this.btn_zwischenzeit.Checked = !this.btn_zwischenzeit.Checked;
+            this.set_Zwischenzeit();
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

@@ -62,10 +62,7 @@ namespace AnalogeUhr
 
         public void toggle_zwischenzeit()
         {
-            if (this.btn_zwischenzeit.BackColor != Color.LightCoral)
-                this.btn_zwischenzeit.BackColor = Color.LightCoral;
-            else
-                this.btn_zwischenzeit.BackColor = this.button_color;
+            this.btn_zwischenzeit.Checked = !this.btn_zwischenzeit.Checked;
         }
     }
 }

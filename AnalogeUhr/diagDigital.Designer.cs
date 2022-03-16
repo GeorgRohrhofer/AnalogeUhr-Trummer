@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btn_StartStop = new System.Windows.Forms.Button();
-            this.btn_zwischenzeit = new System.Windows.Forms.Button();
             this.txt_second = new System.Windows.Forms.RichTextBox();
             this.txt_minute = new System.Windows.Forms.RichTextBox();
+            this.btn_zwischenzeit = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btn_StartStop
@@ -43,17 +43,6 @@
             this.btn_StartStop.Text = "Start";
             this.btn_StartStop.UseVisualStyleBackColor = true;
             this.btn_StartStop.Click += new System.EventHandler(this.btn_StartStop_Click);
-            // 
-            // btn_zwischenzeit
-            // 
-            this.btn_zwischenzeit.Enabled = false;
-            this.btn_zwischenzeit.Location = new System.Drawing.Point(95, 92);
-            this.btn_zwischenzeit.Name = "btn_zwischenzeit";
-            this.btn_zwischenzeit.Size = new System.Drawing.Size(82, 23);
-            this.btn_zwischenzeit.TabIndex = 1;
-            this.btn_zwischenzeit.Text = "Zwischenzeit";
-            this.btn_zwischenzeit.UseVisualStyleBackColor = true;
-            this.btn_zwischenzeit.Click += new System.EventHandler(this.btn_zwischenzeit_Click);
             // 
             // txt_second
             // 
@@ -78,14 +67,26 @@
             this.txt_minute.TabIndex = 2;
             this.txt_minute.Text = "00";
             // 
+            // btn_zwischenzeit
+            // 
+            this.btn_zwischenzeit.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btn_zwischenzeit.Location = new System.Drawing.Point(95, 92);
+            this.btn_zwischenzeit.Name = "btn_zwischenzeit";
+            this.btn_zwischenzeit.Size = new System.Drawing.Size(81, 24);
+            this.btn_zwischenzeit.TabIndex = 4;
+            this.btn_zwischenzeit.Text = "Interim";
+            this.btn_zwischenzeit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_zwischenzeit.UseVisualStyleBackColor = true;
+            this.btn_zwischenzeit.Click += new System.EventHandler(this.btn_zwischenzeit_Click);
+            // 
             // diagDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(188, 127);
+            this.Controls.Add(this.btn_zwischenzeit);
             this.Controls.Add(this.txt_second);
             this.Controls.Add(this.txt_minute);
-            this.Controls.Add(this.btn_zwischenzeit);
             this.Controls.Add(this.btn_StartStop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "diagDigital";
@@ -97,8 +98,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_StartStop;
-        private System.Windows.Forms.Button btn_zwischenzeit;
         private System.Windows.Forms.RichTextBox txt_second;
         private System.Windows.Forms.RichTextBox txt_minute;
+        private System.Windows.Forms.CheckBox btn_zwischenzeit;
     }
 }

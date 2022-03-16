@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btnStartStop = new System.Windows.Forms.Button();
-            this.btn_zwischenzeit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.digitalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_zwischenzeit = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,18 +47,6 @@
             this.btnStartStop.Text = "Start";
             this.btnStartStop.UseVisualStyleBackColor = true;
             this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
-            // 
-            // btn_zwischenzeit
-            // 
-            this.btn_zwischenzeit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_zwischenzeit.Enabled = false;
-            this.btn_zwischenzeit.Location = new System.Drawing.Point(273, 27);
-            this.btn_zwischenzeit.Name = "btn_zwischenzeit";
-            this.btn_zwischenzeit.Size = new System.Drawing.Size(77, 23);
-            this.btn_zwischenzeit.TabIndex = 1;
-            this.btn_zwischenzeit.Text = "Zwischenzeit";
-            this.btn_zwischenzeit.UseVisualStyleBackColor = true;
-            this.btn_zwischenzeit.Click += new System.EventHandler(this.btn_zwischenzeit_Click);
             // 
             // menuStrip1
             // 
@@ -103,6 +91,18 @@
             this.digitalToolStripMenuItem.Text = "Digital";
             this.digitalToolStripMenuItem.Click += new System.EventHandler(this.digitalToolStripMenuItem_Click);
             // 
+            // btn_zwischenzeit
+            // 
+            this.btn_zwischenzeit.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btn_zwischenzeit.Location = new System.Drawing.Point(273, 27);
+            this.btn_zwischenzeit.Name = "btn_zwischenzeit";
+            this.btn_zwischenzeit.Size = new System.Drawing.Size(77, 23);
+            this.btn_zwischenzeit.TabIndex = 3;
+            this.btn_zwischenzeit.Text = "Interim";
+            this.btn_zwischenzeit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_zwischenzeit.UseVisualStyleBackColor = true;
+            this.btn_zwischenzeit.Click += new System.EventHandler(this.btn_zwischenzeit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,12 +130,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnStartStop;
-        private System.Windows.Forms.Button btn_zwischenzeit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem digitalToolStripMenuItem;
+        private System.Windows.Forms.CheckBox btn_zwischenzeit;
     }
 }
 
