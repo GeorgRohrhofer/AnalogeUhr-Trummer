@@ -121,7 +121,7 @@ namespace AnalogeUhr
                     this.SecondAngle = 360;
                 }
 
-                if(this.second == 60)
+                if(this.second == 59)
                 {
                     MinuteAngle -= 6;
                     if (MinuteAngle == 0)
@@ -129,7 +129,7 @@ namespace AnalogeUhr
                         MinuteAngle = 360;
                     }
                     minute += 1;
-                    this.second = 0;
+                    this.second = -1;
                 }
                 this.second += 1;
 
