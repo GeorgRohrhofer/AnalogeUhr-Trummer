@@ -52,7 +52,7 @@ namespace AnalogeUhr
         {
             int angle = 0;
             int Radius = 0;
-            if (this.client_height < this.client_width)
+            if (this.client_height <= this.client_width)
                 Radius = (this.client_height - 125) / 2;
             else if (this.client_height > this.client_width)
                 Radius = (this.client_width - 125) / 2;
